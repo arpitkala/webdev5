@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Capstone Project Dashboard</title>
+  <style>
+    :root {
+      --primary: #0f2027;
+      --secondary: #203a43;
+      --accent: #2c5364;
+      --text: #ffffff;
+      --card-bg: #ffffff;
+      --card-text: #333;
+    }
+
+    body.dark {
+      --card-bg: #1e272e;
+      --card-text: #f1f2f6;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, var(--primary), var(--secondary), var(--accent));
+      color: var(--text);
+      transition: background 0.5s ease;
+    }
+
+    header {
+      text-align: center;
+      padding: 2rem 1rem;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+
+    .toggle-btn {
+      margin-top: 10px;
+      padding: 0.6rem 1.2rem;
+      background: #ffffff;
+      color: #000;
+      font-weight: bold;
+      border: none;
+      border-radius: 20px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .toggle-btn:hover {
+      background: #ddd;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.5rem;
+      padding: 2rem;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .card {
+      background: var(--card-bg);
+      color: var(--card-text);
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 6px 14px rgba(0,0,0,0.15);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.25);
+    }
+
+    .card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      display: block;
+      loading: lazy;
+    }
+
+    .card-body {
+      padding: 1rem;
+    }
+
+    .card-body h3 {
+      margin-top: 0;
+      color: #0984e3;
+    }
+
+    .card-body p {
+      line-height: 1.5;
+      font-size: 15px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+      color: #ccc;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 1.8rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>🚀 Capstone Project Dashboard</h1>
+  <button class="toggle-btn" onclick="toggleTheme()">Toggle Theme 🌙</button>
+</header>
+
+<section class="grid">
+  <!-- Card 1: Capstone -->
+  <div class="card">
+    <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=1200&q=80" alt="Web App Example">
+    <div class="card-body">
+      <h3>1. Build a Full Web App</h3>
+      <p>Bring all your skills together in one final capstone project using HTML, CSS, and JavaScript. Build something meaningful—like a blog, portfolio, or e-commerce site!</p>
+    </div>
+  </div>
+
+  <!-- Card 2: Performance -->
+  <div class="card">
+    <img src="https://images.unsplash.com/photo-1605902711622-cfb43c4437d3?auto=format&fit=crop&w=1200&q=80" alt="Performance Optimization">
+    <div class="card-body">
+      <h3>2. Optimize for Performance</h3>
+      <p>Make your app fast and efficient. Use lazy loading, minify CSS/JS, reduce HTTP requests, and load images smartly for better UX.</p>
+    </div>
+  </div>
+
+  <!-- Card 3: Compatibility -->
+  <div class="card">
+    <img src="https://images.unsplash.com/photo-1617042375877-d2df78c79095?auto=format&fit=crop&w=1200&q=80" alt="Cross-Browser Compatibility">
+    <div class="card-body">
+      <h3>3. Ensure Compatibility</h3>
+      <p>Test across browsers like Chrome, Firefox, Safari, and on mobile devices to ensure consistent rendering and usability everywhere.</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  &copy; 2025 Sushil Sethiya • Capstone UI Demo
+</footer>
+
+<script>
+  function toggleTheme() {
+    document.body.classList.toggle('dark');
+  }
+</script>
+
+</body>
+</html>
